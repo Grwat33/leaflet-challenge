@@ -48,7 +48,7 @@ d3.json(url, function (json) {
   }
 
   function getLegendColor(d) {
-    return d === '(7,∞)' ? '#FF0000' :
+    return d === '(7,10)' ? '#FF0000' :
            d === '(6,7]'  ? '#FF3300' :
            d === '(5,6]'  ? '#FF6600' :
            d === '(4,5]'  ? '#FFCC00' :
@@ -63,7 +63,7 @@ d3.json(url, function (json) {
 
     var div = L.DomUtil.create('div', 'info legend');
     labels = ['<strong>Categories</strong>'],
-    categories = ['(7,∞)','(6,7]','(5,6]','(4,5]','(3,4]','(2,3]','(1,2]', '[0,1]'];
+    categories = ['(7,10)','(6,7]','(5,6]','(4,5]','(3,4]','(2,3]','(1,2]', '[0,1]'];
 
     for (var i = 0; i < categories.length; i++) {
 
