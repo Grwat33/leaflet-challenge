@@ -23,6 +23,7 @@ d3.json(url, function (json) {
     var properties = alldata.map(object => object.properties);
     var type = alldata.map(object => object.type);
     var mag = properties.map(object => object.mag);
+    var place = properties.map(object => object.place);
     var coordinates = geometry.map(object => object.coordinates);
     console.log(mag);
 
@@ -42,7 +43,7 @@ d3.json(url, function (json) {
 
     // Set the data location property to a variable
     var location = alldata[i].geometry;
-    L.circle([location.coordinates[1], location.coordinates[0]], {color: getColor(mag[i]), radius: mag[i]*50000}).addTo(map).bindPopup("Magnitude: " + mag[i]);
+    L.circle([location.coordinates[1], location.coordinates[0]], {color: getColor(mag[i]), radius: mag[i]*50000}).addTo(map).bindPopup("Magnitude: " + mag[i] + " <br> Place: " + place[i] + " <br> ID: " + id[i]);
 
   }
 
